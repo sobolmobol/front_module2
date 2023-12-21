@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 39</title>
+</head>
+<body>
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: 'Яблоки',
+                price: 15,
+            },
+            {
+                id: 2,
+                name: 'Бананы',
+                price: 30,
+            },
+            {
+                id: 3,
+                name: 'Вишня',
+                price: 150.23,
+            },
+            {
+                id: 4,
+                name: 'Дыня',
+                price: 85.5,
+            },
+            {
+                id: 5,
+                name: 'Тыква',
+                price: 235.99,
+            }
+        ];
+
+        const cart = [
+            {
+                id: 4,
+                quantity: 3
+            },
+            {
+                id: 5,
+                quantity: 2
+            },
+            {
+                id: 3,
+                quantity: 10
+            }
+        ];
+
+
+        function getTotal(cart, products) {
+            const changedProducts = products.reduce((acc, product) =>{
+                acc[product.id] = product; //Значеие id: продукт, 3: продукт
+                return acc;
+            }, {}) //{}-нач знач
+            let sum = 0;
+            cart.forEach(item => {
+                const prod = changedProducts[item.id];
+                if(prod){
+                    sum +=prod.price * item.quantity;
+                }
+            });
+            let formatter = new Intl.NumberFormat("ru", {
+            style: "currency",
+            currency: "RUB"
+            });
+            sum = formatter.format(sum);
+            return sum;
+        }
+
+        const result = getTotal(cart, products);
+        console.log(result);
+    </script>
+</body>
+</html>

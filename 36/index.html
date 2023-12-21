@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 36</title>
+</head>
+<body>
+    <script>
+        const baseNumber = 10;
+        const arrayNumber = Array.from({length:baseNumber }, (v, k) => k);
+        console.log(arrayNumber);
+        let sum = 0
+        //1
+        for(let i = 0; i <arrayNumber.length; i++){
+            sum = arrayNumber[i]**2 + sum;
+        }
+        console.log(sum)
+        sum = 0
+        //2
+        for (let el in arrayNumber){
+            sum = sum + el**2;
+        }
+        console.log(sum)
+        //3
+        sum = 0;
+        arrayNumber.forEach((el)=>{sum += el**2});
+        console.log(sum);
+        //4
+        sum = arrayNumber.reduce(function(a, b){
+            return a + b**2;
+        })
+        console.log(sum);
+    </script>
+</body>
+</html>

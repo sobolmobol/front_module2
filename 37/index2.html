@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 37.2</title>
+</head>
+<body>
+    <script>
+            const season = (number) => {
+            if (number === 12 || number <= 2) {
+                return "зима";
+            } 
+            else if (number <= 5) {
+                return "весна";
+            } 
+            else if (number <= 8) {
+                return "лето";
+            } 
+            else if (number <= 11) {
+                return "осень";
+            } 
+            else 
+            {
+                return "некорректный номер";
+            }
+        }
+        console.log(season(12))
+    </script>
+</body>
+</html>

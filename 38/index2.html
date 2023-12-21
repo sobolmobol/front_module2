@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 38.2</title>
+</head>
+<body>
+    <script>
+        const add = (x, y) => x + y;
+        const subtract = (x, y) => x - y;
+        const multiply = (x, y) => x * y;
+        const divide = (x, y) => x / y;
+
+        const calculate = (v1, v2, fun) => {
+            return fun(v1, v2);
+        }
+
+        const resultAdd = calculate(1, 2, add);
+        console.log(resultAdd);
+        const resultSubtract = calculate(10, 5, subtract);
+        console.log(resultSubtract);
+        const resultMultiply = calculate(9, 4, multiply);
+        console.log(resultMultiply);
+        const resultDivide= calculate(39, 3, divide);
+        console.log(resultDivide);
+
+    </script>
+</body>
+</html>

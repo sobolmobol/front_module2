@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 41</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: 'Alex',
+            age: 20,
+            isAdult: true,
+
+            hello: function() { console.log(`Hi ${this.firstName}`)},
+
+            info: function(){
+                const split =  () => {
+                    return `
+                        Name: ${this.firstName}
+                        Age: ${this.age}
+                        isAdult: ${this.isAdult ? 'Y': 'N'}
+                    `
+                }
+                console.log(split())
+            },
+        };
+        person.hello();
+        person.info();
+
+// стрелочные функции заимствуют контекст this из окружающей функции, тут split в info, у инфо нет контекста this, поэтому ставим обычную функцию,
+// которая будет иметь свой собственный контекст this и получать доступ к свойствам объекта person
+//Т.к строгий режим не включен, this ссылается на глобальный объект, а в глобальном объекте переменная firstName не определена.
+    </script>
+</body>
+</html>

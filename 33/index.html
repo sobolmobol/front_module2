@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 33</title>
+</head>
+<body>
+    <script>
+        const age = 10
+        console.log('age: ', Number(age), Boolean(age), String(age));
+
+        const undVal = undefined;
+        console.log('undVal: ', Number(undVal), Boolean(undVal), String(undVal))
+
+        const nullVal = null;
+        console.log('nullVal: ', Number(nullVal), Boolean(nullVal), String(nullVal))
+
+        const boolVal = true;
+        console.log('boolVal: ', Number(boolVal), Boolean(boolVal), String(boolVal))
+
+        const num = 20;
+        console.log('num: ', Number(num), Boolean(num), String(num))
+
+        const bigintVal = 123456789012345678901234567890n;
+        console.log('bigintVal: ', Number(bigintVal), Boolean(bigintVal), String(bigintVal))
+
+        const str = 'Hello, World!';
+        console.log('str: ', Number(str), Boolean(str), String(str))
+
+        const user = {
+            name: 'Alex',
+            age: 30
+        }
+        console.log('user: ', Number(user), Boolean(user), String(user))
+
+        let arr = [1, 2, 3, 4, 5]
+        console.log('arr: ', Number(arr), Boolean(arr), String(arr))
+
+        const sumNum = function(x, y) {
+            return x+y;
+        }
+        console.log('sumNum: ', Number(sumNum), Boolean(sumNum), String(sumNum))
+
+        const dateNow = new Date("2023-12-06")
+        console.log('dateNow: ', Number(dateNow), Boolean(dateNow), String(dateNow))
+
+        const symVal = Symbol('symbol');
+        console.log('symVal: ', Boolean(symVal), String(symVal))
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 37.3</title>
+</head>
+<body>
+    <script>
+        function statsArray(...args) { //rest
+            console.log("Длина: ", args.length);
+            console.log("Минимальное значение: ", Math.min(...args));
+            console.log("Максимальное значение: ", Math.max(...args));
+        }
+        arr =[7,6,8,10,0];
+        statsArray(...arr); //Это spread
+    </script>
+</body>
+</html>
